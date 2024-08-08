@@ -26,6 +26,218 @@
     console.log(array1[4]);
     console.log(array1[7]);
 
+    let book1 = {
+        title: "Роман про людське призначення",
+        pageCount: 451,
+        genre: "роман"
+    };
+
+    let book2 = {
+        title: "Фелікс Австрія",
+        pageCount: 267,
+        genre: "роман"
+    };
+
+    let book3 = {
+        title: "Перверзія",
+        pageCount: 189,
+        genre: "роман"
+    };
+
+
+    let book4 = {
+        title: "Роман про людське призначення",
+        pageCount: 451,
+        genre: "роман",
+        authors: [
+            {name: "Емма Андієвська", age: 56}
+        ]
+    };
+
+    let book5 = {
+        title: "Фелікс Австрія",
+        pageCount: 267,
+        genre: "роман",
+        authors: [
+            {name: "Софія Андрухович", age: 38}
+        ]
+    };
+
+    let book6 = {
+        title: "Перверзія",
+        pageCount: 189,
+        genre: "роман",
+        authors: [
+            {name: "Юрій Андрухович", age: 63}
+        ]
+    };
+
+
+    let users = [
+        {name: "DFyz", username: "fjfhj123", password: "35636"},
+        {name: "JKuy", username: "nfnfh456", password: "3657"},
+        {name: "DSGgh", username: "pegjfj9", password: "8533"},
+        {name: "Qoslds", username: "mnfn1", password: "75858"},
+        {name: "Ftrjn", username: "anfn2", password: "8578"},
+        {name: "Uljxnnd", username: "nafn3", password: "3677"},
+        {name: "gsdgn", username: "oljlhjh4", password: "458686"},
+        {name: "xbcnfn", username: "kafj5", password: "468648"},
+        {name: "ethth", username: "dmj6", password: "486468"},
+        {name: "weqrrrg", username: "svillk7", password: "4747468"}
+    ];
+
+    console.log(users[0].password);
+    console.log(users[1].password);
+    console.log(users[2].password);
+    console.log(users[3].password);
+    console.log(users[4].password);
+    console.log(users[5].password);
+    console.log(users[6].password);
+    console.log(users[7].password);
+    console.log(users[8].password);
+    console.log(users[9].password);
+
+
+    let temperatures = [
+        {day: "Пн", morning: 13, afternoon: 20, evening: 18},
+        {day: "Вт", morning: 16, afternoon: 21, evening: 19},
+        {day: "Ср", morning: 18, afternoon: 23, evening: 18},
+        {day: "Чт", morning: 20, afternoon: 23, evening: 21},
+        {day: "Пт", morning: 21, afternoon: 22, evening: 20},
+        {day: "Сб", morning: 22, afternoon: 22, evening: 20},
+        {day: "Нд", morning: 23, afternoon: 22, evening: 20}
+    ];
+    console.log(temperatures);
+
+
+    let x = 1;
+    if (x !== 0) {
+        console.log('Вірно');
+    } else {
+        console.log('Невірно');
+    }
+    x = 1;
+    if (x !== 0) {
+        console.log('Вірно');
+    } else {
+        console.log('Невірно');
+    }
+    x = 0;
+    if (x !== 0) {
+        console.log('Вірно');
+    } else {
+        console.log('Невірно');
+    }
+    x = -3;
+    if (x !== 0) {
+        console.log('Вірно');
+    } else {
+        console.log('Невірно');
+    }
+
+
+    let time = 6;
+    if (time >= 0 && time <= 15) {
+        console.log('Перша чверть години');
+    } else if (time >= 15 && time <= 30) {
+        console.log('Друга чверть години');
+    } else if (time >= 30 && time <= 45) {
+        console.log('Третя чверть години');
+    } else if (time >= 45 && time <= 60) {
+        console.log('Четверта чверть години');
+    } else {
+        console.log('Невірне значення');
+    }
+
+
+    let day = 8;
+
+    if (day >= 1 && day <= 10) {
+        console.log('Перша декада місяця');
+    } else if (day >= 11 && day <= 20) {
+        console.log('Друга декада місяця');
+    } else if (day >= 21 && day <= 31) {
+        console.log('Третя декада місяця');
+    } else {
+        console.log('Невірне значення');
+    }
+
+    let dayNumber = 4;
+
+    switch (dayNumber) {
+        case 1:
+            console.log('Monday');
+            break;
+        case 2:
+            console.log('Tuesday');
+            break;
+        case 3:
+            console.log('Wednesday');
+            break;
+        case 4:
+            console.log('Thursday');
+            break;
+        case 5:
+            console.log('Friday');
+            break;
+        case 6:
+            console.log('Saturday');
+            break;
+        case 7:
+            console.log('Sunday');
+            break;
+        default:
+            console.log('Невірний номер дня тижня');
+
+    }
+
+    let num1 = 34;
+    let num2 = 34;
+
+    if (num1 > num2) {
+        console.log(`Максимальне число: ${num1}`);
+    } else if (num2 > num1) {
+        console.log(`Максимальне число: ${num2}`);
+    } else {
+        console.log('Числа рівні');
+    }
+
+
+    let y = 0;
+    if (!y) {
+        y = "default";
+    }
+    console.log(y);
+
+
+
+
+
+
+    let coursesAndDurationArray = [
+        {title: 'JavaScript Complex', monthDuration: 5},
+        {title: 'Java Complex', monthDuration: 6},
+        {title: 'Python Complex', monthDuration: 6},
+        {title: 'QA Complex', monthDuration: 4},
+        {title: 'FullStack', monthDuration: 7},
+        {title: 'Frontend', monthDuration: 4}
+    ];
+
+    if (coursesAndDurationArray[0].monthDuration > 5) {
+        console.log('super');
+    }if (coursesAndDurationArray[1].monthDuration > 5) {
+        console.log('super');
+    }if (coursesAndDurationArray[2].monthDuration > 5) {
+        console.log('super');
+    }if (coursesAndDurationArray[3].monthDuration > 5) {
+        console.log('super');
+    }if (coursesAndDurationArray[4].monthDuration > 5) {
+        console.log('super');
+    }if (coursesAndDurationArray[5].monthDuration > 5) {
+        console.log('super');
+    }
+
+
 
 
 
