@@ -209,7 +209,7 @@
    // --написати пошук всіх об'єктів, в яких в modules є sass
     //--написати пошук всіх об'єктів, в яких в modules є docker
 
-    let coursesArray = [
+    const coursesArray = [
         {
             title: 'JavaScript Complex',
             monthDuration: 5,
@@ -278,8 +278,11 @@
             modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
         }
     ];
-    console.log(coursesArray.filter(coursesArray => coursesArray.modules = 'sass'));
-    console.log(coursesArray.filter(coursesArray => coursesArray.modules = 'docker'));
+
+    console.log(coursesArray.filter(coursesArray => coursesArray.modules.includes('sass')));
+    console.log(coursesArray.filter(coursesArray => coursesArray.modules.includes('docker')));
+
+
 </script>
 </body>
 </html>
