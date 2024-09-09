@@ -19,40 +19,50 @@
     //     Подумати і реалізувати логіку, в якій кінцевий об'єкт буде мати функції,які в нього були до цього моменту.
 
 
-
-    function deepCopy(obj) {
-        if (obj === undefined || obj === null) {
-            return obj;
+    const original = {
+        name: "kokos",
+        age: 46,
+        address: {
+            city: "Chernigiv",
         }
-        if (typeof obj === 'number' && isNaN(obj)) {
-            return NaN;
+    };
+    function deepCopy(original) {
+        if (original === undefined || original === null || Number.isNaN(original)) {
+            return original;
         }
 
-        if (typeof obj === 'function') {
-            return obj;
+        if (typeof original !== 'object') {
+            return original;
+        }
 
+        if (Array.isArray(original)) {
+            return original.map(item => deepCopy(item));
+        }
 
-            if (typeof obj !== 'object') {
-                return obj;
+        const copied = {};
+        for (const key in original) {
+            if (original.hasOwnProperty(key)) {
+                copied[key] = deepCopy(original[key]);
             }
-
-
         }
+
+        return copied;
     }
+    const copied = deepCopy(original);
+    console.log('Original:', original);
+    console.log('Copied:', copied);
+    console.log(copied);
+    console.log(copied === original);
+    console.log(copied.address === original.address);
+    console.log('undefined:', deepCopy(undefined));
+    console.log('null:', deepCopy(null));
+    console.log('NaN:', deepCopy(NaN));
 
-        function deepCopyUsingJSON(vassal) {
-            return JSON.parse(JSON.stringify(vassal));
-        }
 
-        const original = {
-            a: 35353,
-            b: {
-                c: 35336,
-                d: [46466, 5666, {e: 96080}]
-            }
-        };
-        const copied = deepCopyUsingJSON(original);
-        console.log(copied);
+
+
+
+
 
 
         // - є масив
@@ -68,31 +78,31 @@
         //     Зробити все ВИКЛЮЧНО за допомоги інлайн конструкції
 
 
-        let coursesAndDurationArray = [
-            {title: 'JavaScript Complex', monthDuration: 5},
-            {title: 'Java Complex', monthDuration: 6},
-            {title: 'Python Complex', monthDuration: 6},
-            {title: 'QA Complex', monthDuration: 4},
-            {title: 'FullStack', monthDuration: 7},
-            {title: 'Frontend', monthDuration: 4}
-        ];
-
-        let transformArray = coursesAndDurationArray.map((course, index) => ({
-            id: index + 1,
-            title: course.title,
-            monthDuration: course.monthDuration
-        }));
-
-        console.log(transformArray);
-
-        let transformArray1 = coursesAndDurationArray.map((course, index) => ({id: index + 1, ...course}));
-
-        console.log(transformArray1);
-
-        console.log(coursesAndDurationArray.map((course, index) => ({id: index + 1, ...course})));
-
-
-
+        // let coursesAndDurationArray = [
+        //     {title: 'JavaScript Complex', monthDuration: 5},
+        //     {title: 'Java Complex', monthDuration: 6},
+        //     {title: 'Python Complex', monthDuration: 6},
+        //     {title: 'QA Complex', monthDuration: 4},
+        //     {title: 'FullStack', monthDuration: 7},
+        //     {title: 'Frontend', monthDuration: 4}
+        // ];
+        //
+        // let transformArray = coursesAndDurationArray.map((course, index) => ({
+        //     id: index + 1,
+        //     title: course.title,
+        //     monthDuration: course.monthDuration
+        // }));
+        //
+        // console.log(transformArray);
+        //
+        // let transformArray1 = coursesAndDurationArray.map((course, index) => ({id: index + 1, ...course}));
+        //
+        // console.log(transformArray1);
+        //
+        // console.log(coursesAndDurationArray.map((course, index) => ({id: index + 1, ...course})));
+        //
+        //
+        //
 
 
 
